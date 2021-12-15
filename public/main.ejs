@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="css/grid.css" />
+	<title>Movie Mindset!</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main_content">
+            <div class="poster_box">
+                <img class="poster" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2<%= image_url %>">
+            </div>
+            <div class = "title">
+                <p><h1><%= title %> (<%= year %>)</h1></p>
+                <span class="rate"><i id='one'>★</i><i id='two'>★</i><i id='three'>★</i><i id='four'>★</i><i id ='five'>★</i></span>
+                <p><h3 id="nosee">I haven't seen it!</h3></p>
+            </div>
+        </div>
+		<div id="recommend">
+			<div>
+				<h1>Recommendations</h1>
+			</div>
+			<div class="rec_wrapper">
+			<% for(var i=0; i < recs.length; i++) {%>
+				<div>
+					<div>
+						<img class="rec_poster" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2<%= recs[i][2] %>">
+					</div>
+					<div>
+						<h2><%= recs[i][0] %> (<%= recs[i][1] %>)</h2>
+					</div>
+				</div>
+			 <% } %>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

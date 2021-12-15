@@ -47,7 +47,6 @@ app.post('/', async function(req, res){
 });
 
 app.post('/main', async function(req, res){
-  console.log("hellohellohello")
   var {movieId, userid} = req.session;
   var out = req.body.value;
   await addRating(userid,movieId,out);
@@ -56,7 +55,6 @@ app.post('/main', async function(req, res){
 app.get("/main", async function(req, res) {
   var {userid} = req.session;
   var recs = await getRecs(userid);
-  console.log(recs);
   var movie = await getMovie(userid);
   req.session.movieId = movie.id;
   res.render('main.ejs', { image_url: movie.poster, title: movie.title, year:movie.year, recs: recs})

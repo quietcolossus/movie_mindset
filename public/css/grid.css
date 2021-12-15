@@ -1,0 +1,155 @@
+body {
+    height: 80vh;
+    overflow: hidden;
+	background-color: #20272E;
+}
+
+div {
+	padding:0%;
+	margin: 0%;
+}
+
+.wrapper{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 67% 33%;
+    max-width: 100vw;
+    min-width: 50vh;
+    height: 90vh;
+    padding: 1em;
+}
+
+.rec_wrapper{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    max-width: 100vw;
+    min-width: 50vh;
+    height: 90vh;
+    padding: 0em;
+	text-align: center;
+}
+
+p {
+	margin-block-start: 5px;
+    margin-block-end: 0em;
+}
+
+.main_content{
+	height:90vh;
+	width:67vw;
+	display: grid;
+	grid-template-rows:80% 20%;
+	padding:0em;
+	text-align: center;
+}
+h1{
+    font-family: 'Lora', italic;
+    font-size: 40px;
+	text-shadow: #fc0 0 0 20px;
+	color: #fc0;
+	text-align: center;
+}
+
+h3{
+    font-family: 'Lora', italic;
+    font-size: 15px;
+	margin: 0pt;
+	color:#8C7100;
+	cursor: pointer;
+}
+
+h2{
+    font-family: 'Lora', italic;
+    font-size: 15px;
+	margin: 0pt;
+	color:#fc0;
+	text-shadow: #fc0 0 0 20px;
+}
+
+h3:hover{
+	color:#fc0;
+	text-shadow: #fc0 0 0 20px;
+}
+
+.title {
+	font-size: 40px;
+	color:#fc0;
+	padding: 0pt;
+	
+}
+
+.poster {
+	/* border-radius: 15px; */
+	border: 4px solid #fc0;
+	box-shadow: #fc0 0 0 20px;
+}
+
+.rec_poster {
+	/* border-radius: 15px; */
+	border: 2px solid #fc0;
+	box-shadow: #fc0 0 0 10px;
+	height: 150px;
+}
+
+img{
+    height: 100%;
+    object-fit:contain;
+}
+
+.rate {
+	font-size: 50px;
+}
+
+
+/* These styles are applied by default.
+   They will also override the hover
+   style for all stars to the right
+   of the currently hovered star. */
+   .rate i, .rate i:hover ~ i {
+	color: #8C7100;
+	text-shadow: none;
+	transition: color 200ms,
+				text-shadow 200ms;
+	/* This will remove the delay when
+	   moving the cursor left or right
+	   within the set of stars. */
+	transition-delay: 0;
+  }
+  
+  /* This is the style that will be
+	 applied to all stars and then
+	 subsequently removed from the stars
+	 to the right of the one being
+	 hovered. */
+  .rate:hover i {
+	color: #fc0;
+	text-shadow: #fc0 0 0 20px;
+  }
+  
+  /* Make the effect apply one star at a
+	 time. Limiting the selector to when
+	 .rate is hovered removes the effect
+	 without delay when cursor leaves
+	 the .rate area. */
+  .rate:hover i:nth-child(2) {
+	transition-delay: 30ms;
+  }
+  
+  .rate:hover i:nth-child(3) {
+	transition-delay: 60ms;
+  }
+  
+  .rate:hover i:nth-child(4) {
+	transition-delay: 90ms;
+  }
+  
+  .rate:hover i:nth-child(5) {
+	transition-delay: 120ms;
+  }
+  
+  /* Miscellaneous styles. */
+  .rate i {
+	cursor: pointer;
+	font-style: normal;
+  }
